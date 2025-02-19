@@ -1,6 +1,6 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: namespace-510
-  labels:
-    deployedby: PlatformTeam
+ name: namespace-510
+ labels:
+ deployedby: PlatformTeam

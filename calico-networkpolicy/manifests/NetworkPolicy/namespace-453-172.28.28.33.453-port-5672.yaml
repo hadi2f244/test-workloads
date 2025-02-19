@@ -1,22 +1,22 @@
-apiVersion: projectcalico.org/v3
+apiVersion: crd.projectcalico.org/v1
 kind: NetworkPolicy
 metadata:
-  name: "namespace-453-service-to-172.28.28.33.453-port-5672"
-  namespace: namespace-453
-  annotations:
-    MeTicketNumber: "2420"
-    MeUserRequest: r.vosoughi@asax.ir
-  labels:
-    deployedby: PlatformTeam
+ name: "namespace-453-service-to-172.28.28.33.453-port-5672"
+ namespace: namespace-453
+ annotations:
+ MeTicketNumber: "2420"
+ MeUserRequest: r.vosoughi@asax.ir
+ labels:
+ deployedby: PlatformTeam
 spec:
-  egress:
-  - action: Allow
-    protocol: TCP
-    destination:
-      namespaceSelector: global()
-      selector: 172.28.28.33.453 == 'true'
-      ports:
-      - 5672
-  order: 1
-  types:
-  - Egress
+ egress:
+ - action: Allow
+ protocol: TCP
+ destination:
+ namespaceSelector: global()
+ selector: 172.28.28.33.453 == 'true'
+ ports:
+ - 5672
+ order: 1
+ types:
+ - Egress

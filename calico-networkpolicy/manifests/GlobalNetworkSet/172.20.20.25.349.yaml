@@ -1,12 +1,12 @@
-apiVersion: projectcalico.org/v3
+apiVersion: crd.projectcalico.org/v1
 kind: GlobalNetworkSet
 metadata:
-  annotations:
-    description: "stage-vc-asax-ir"
-  labels:
-    172.20.20.25.349: "true"
-    deployedby: PlatformTeam
-  name: 172.20.20.25.349
+ annotations:
+ description: "stage-vc-asax-ir"
+ labels:
+ 172.20.20.25.349: "true"
+ deployedby: PlatformTeam
+ name: 172.20.20.25.349
 spec:
-  nets:
-  - 172.20.20.25.349
+ nets:
+ - 172.20.20.25.349
