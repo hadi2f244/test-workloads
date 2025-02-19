@@ -1,0 +1,22 @@
+apiVersion: projectcalico.org/v3
+kind: NetworkPolicy
+metadata:
+  name: "namespace-786-service-to-172.28.28.33.786-port-5672"
+  namespace: namespace-786
+  annotations:
+    MeTicketNumber: "2420"
+    MeUserRequest: r.vosoughi@asax.ir
+  labels:
+    deployedby: PlatformTeam
+spec:
+  egress:
+    - action: Allow
+      protocol: TCP
+      destination:
+        namespaceSelector: global()
+        selector: 172.28.28.33.786 == 'true'
+        ports:
+          - 5672
+  order: 1
+  types:
+    - Egress

@@ -1,0 +1,12 @@
+apiVersion: projectcalico.org/v3
+kind: GlobalNetworkSet
+metadata:
+  annotations:
+    description: "stage-vc-asax-ir"
+  labels:
+    172.20.20.25.1421: "true"
+    deployedby: PlatformTeam
+  name: 172.20.20.25.1421
+spec:
+  nets:
+    - 172.20.20.25.1421

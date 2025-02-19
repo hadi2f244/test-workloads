@@ -1,0 +1,22 @@
+apiVersion: projectcalico.org/v3
+kind: NetworkPolicy
+metadata:
+  name: "namespace-812-service-to-172.28.28.33.812-port-5672"
+  namespace: namespace-812
+  annotations:
+    MeTicketNumber: "2420"
+    MeUserRequest: r.vosoughi@asax.ir
+  labels:
+    deployedby: PlatformTeam
+spec:
+  egress:
+    - action: Allow
+      protocol: TCP
+      destination:
+        namespaceSelector: global()
+        selector: 172.28.28.33.812 == 'true'
+        ports:
+          - 5672
+  order: 1
+  types:
+    - Egress

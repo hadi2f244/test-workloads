@@ -1,0 +1,22 @@
+apiVersion: projectcalico.org/v3
+kind: NetworkPolicy
+metadata:
+  name: "namespace-581-service-to-172.28.28.33.581-port-5672"
+  namespace: namespace-581
+  annotations:
+    MeTicketNumber: "2420"
+    MeUserRequest: r.vosoughi@asax.ir
+  labels:
+    deployedby: PlatformTeam
+spec:
+  egress:
+    - action: Allow
+      protocol: TCP
+      destination:
+        namespaceSelector: global()
+        selector: 172.28.28.33.581 == 'true'
+        ports:
+          - 5672
+  order: 1
+  types:
+    - Egress
