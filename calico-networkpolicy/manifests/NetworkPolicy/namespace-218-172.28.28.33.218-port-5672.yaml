@@ -10,13 +10,13 @@ metadata:
     deployedby: PlatformTeam
 spec:
   egress:
-    - action: Allow
-      protocol: TCP
-      destination:
-        namespaceSelector: global()
-        selector: 172.28.28.33.218 == 'true'
-        ports:
-          - 5672
+  - action: Allow
+    protocol: TCP
+    destination:
+      namespaceSelector: global()
+      selector: 172.28.28.33.218 == 'true'
+      ports:
+      - 5672
   order: 1
   types:
-    - Egress
+  - Egress

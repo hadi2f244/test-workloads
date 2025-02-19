@@ -1,0 +1,6 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: namespace-1377
+  labels:
+    deployedby: PlatformTeam

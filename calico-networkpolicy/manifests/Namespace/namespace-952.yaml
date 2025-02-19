@@ -1,0 +1,6 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: namespace-952
+  labels:
+    deployedby: PlatformTeam
