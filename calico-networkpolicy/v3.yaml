@@ -1,0 +1,13 @@
+apiVersion: projectcalico.org/v3
+kind: GlobalNetworkSet
+metadata:
+  annotations:
+    description: "-a2-ats-db-cluster"
+  labels:
+    172-19-3-130-29: "true"
+    deployedby: PlatformTeam
+  name: 172-19-3-130-29
+spec:
+  nets:
+    - 172.19.3.130/29
+
